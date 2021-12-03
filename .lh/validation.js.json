@@ -1,0 +1,426 @@
+{
+    "sourceFile": "validation.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 102,
+            "patches": [
+                {
+                    "date": 1635959767456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1635959778452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n-validation(){\r\n-    \r\n+function validation(){\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959807013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n function validation(){\r\n \r\n+}\r\n+function isRequired (){\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959820299,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n function validation(){\r\n \r\n }\r\n function isRequired (){\r\n-    \r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959841967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n function validation(){\r\n \r\n }\r\n-function isRequired (){\r\n+isRequired =function (){\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959866249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+function validation(){\r\n+\r\n+}\r\n+validation.isRequired = function (){\r\n+\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959875874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,11 +2,8 @@\n \r\n }\r\n validation.isRequired = function (){\r\n \r\n-}\n-function validation(){\r\n-\r\n }\r\n-isRequired =function (){\r\n+validation.Email = function (){\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959882417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n }\r\n validation.isRequired = function (){\r\n \r\n }\r\n-validation.Email = function (){\r\n+validation.isEmail = function (){\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635959983538,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n function validation(){\r\n-\r\n+     console.log(validation.form)\r\n }\r\n validation.isRequired = function (){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1635960260960,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,12 @@\n-function validation(){\r\n-     console.log(validation.form)\r\n+function validation(option){\r\n+     \r\n }\r\n+\r\n+\r\n+// định nghĩa rules\r\n validation.isRequired = function (){\r\n \r\n }\r\n-validation.isEmail = function (){\r\n-\r\n+validation.isEmail = function (e){\r\n+    console.log(e)\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635960400319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,14 @@\n-function validation(option){\r\n-     \r\n+const $ = document.querySelector.bind(document);\r\n+const $$ = document.querySelectorAll.bind(document);\r\n+function validation(options){\r\n+\r\n }\r\n \r\n \r\n // định nghĩa rules\r\n validation.isRequired = function (){\r\n \r\n }\r\n-validation.isEmail = function (e){\r\n-    console.log(e)\r\n+validation.isEmail = function (){\r\n+    console.log()\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635960419518,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n-\r\n+    console.log(options.form)\r\n }\r\n \r\n \r\n // định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1635960453471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n-    console.log(options.form)\r\n+    console.log($(options.form))\r\n }\r\n \r\n \r\n // định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1635960567494,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n-    console.log($(options.form))\r\n+   const formElement = $(options.form);\r\n+   if(formElement{\r\n+       console.log(formElement)\r\n+   }\r\n }\r\n \r\n \r\n // định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1635960578948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n    const formElement = $(options.form);\r\n-   if(formElement{\r\n+   if(formElement){\r\n        console.log(formElement)\r\n    }\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1635997734453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,3 @@\n-const $ = document.querySelector.bind(document);\r\n-const $$ = document.querySelectorAll.bind(document);\r\n-function validation(options){\r\n-   const formElement = $(options.form);\r\n-   if(formElement){\r\n-       console.log(formElement)\r\n-   }\r\n-}\r\n-\r\n-\r\n-// định nghĩa rules\r\n-validation.isRequired = function (){\r\n-\r\n-}\r\n-validation.isEmail = function (){\r\n-    console.log()\r\n+function validation(){\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635997771183,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n function validation(){\r\n+\r\n+}\r\n+const validation.isRequired = function(){\r\n     \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635997779405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n function validation(){\r\n \r\n }\r\n-const validation.isRequired = function(){\r\n-    \r\n+validation.isRequired = function(){\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635997811412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+function validation(){\r\n+\r\n+}\r\n+validation.isRequired = function(){\r\n+\r\n+}\r\n+validation.isEmail = function(){\r\n+    \r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635997990888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,21 @@\n+window.chrome.runtime.sendMessage(\r\n+    EXTENSION_ID,\r\n+    { message:\"---\" }, // jsonable message\r\n+    (result) => {\r\n+      if (!window.chrome.runtime.lastError) {\r\n+         // message processing code goes here\r\n+      } else {\r\n+        // error handling code goes here\r\n+      }\r\n+    }\r\n+  );\r\n+\r\n function validation(){\r\n \r\n }\r\n validation.isRequired = function(){\r\n \r\n }\r\n validation.isEmail = function(){\r\n-    \r\n-}\n-function validation(){\r\n \r\n-}\r\n-validation.isRequired = function(){\r\n-\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635998000855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,4 @@\n-window.chrome.runtime.sendMessage(\r\n-    EXTENSION_ID,\r\n-    { message:\"---\" }, // jsonable message\r\n-    (result) => {\r\n-      if (!window.chrome.runtime.lastError) {\r\n-         // message processing code goes here\r\n-      } else {\r\n-        // error handling code goes here\r\n-      }\r\n-    }\r\n-  );\r\n \r\n function validation(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1635998214631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n-function validation(){\r\n-\r\n+function validation(options){\r\n+    console.log(options)\r\n }\r\n validation.isRequired = function(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1635998233216,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n \r\n function validation(options){\r\n-    console.log(options)\r\n+    console.log(options.form)\r\n }\r\n validation.isRequired = function(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1635998305029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n-\r\n+const $ = document.querySelector.bind(document);\r\n+const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n-    console.log(options.form)\r\n+    console.log($(options.form))\r\n }\r\n validation.isRequired = function(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1635998366558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,11 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n-    console.log($(options.form))\r\n+  const formElement = $(options.form);\r\n+  if(formElement){\r\n+      console.log(formElement)\r\n+  }\r\n }\r\n validation.isRequired = function(){\r\n \r\n }\r\n"
+                },
+                {
+                    "date": 1635998393639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-      console.log(formElement)\r\n+      console.log([formElement])\r\n   }\r\n }\r\n validation.isRequired = function(){\r\n \r\n"
+                },
+                {
+                    "date": 1635998406662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-      console.log([formElement])\r\n+      console.log({formElement})\r\n   }\r\n }\r\n validation.isRequired = function(){\r\n \r\n"
+                },
+                {
+                    "date": 1635998459689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,13 +2,13 @@\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-      console.log({formElement})\r\n+\r\n   }\r\n }\r\n-validation.isRequired = function(){\r\n-\r\n+validation.isRequired = function(selector){\r\n+    console.log(selector)\r\n }\r\n-validation.isEmail = function(){\r\n+validation.isEmail = function(selector){\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635998471781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n-    console.log(selector)\r\n+    console.log($(selector))\r\n }\r\n validation.isEmail = function(selector){\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635998723558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,19 @@\n \r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n-    console.log($(selector))\r\n+    return {\r\n+        selector,\r\n+        test : function(){\r\n+\r\n+        }\r\n+    };\r\n }\r\n validation.isEmail = function(selector){\r\n-\r\n+     return {\r\n+        selector,\r\n+        test : function(){\r\n+            \r\n+        }\r\n+    };\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635998746325,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n const $$ = document.querySelectorAll.bind(document);\r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-\r\n+    console.log(options.rules)\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n     return {\r\n"
+                },
+                {
+                    "date": 1635999171778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n+\r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-    console.log(options.rules)\r\n+    options.rules.forEach((rule) => {\r\n+        console(rule)\r\n+    });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n     return {\r\n"
+                },
+                {
+                    "date": 1635999237420,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-    options.rules.forEach((rule) => {\r\n-        console(rule)\r\n+    options.rules.forEach((rules) => {\r\n+        console.log(rules)\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999244192,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,10 @@\n \r\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n-    options.rules.forEach((rules) => {\r\n-        console.log(rules)\r\n+    options.rules.forEach((rule) => {\r\n+        console.log(rule)\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999261773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n-        console.log(rule)\r\n+        console.log(rule.selector)\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999509406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,11 @@\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n-        console.log(rule.selector)\r\n+        rule.onclick = function(){\r\n+            console.log(rule.selector)\r\n+        }\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999546329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,9 @@\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n-        rule.onclick = function(){\r\n-            console.log(rule.selector)\r\n-        }\r\n+        console.log(rule)\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999604480,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n function validation(options){\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n-        console.log(rule)\r\n+        const inputElement = formElement.querySelector(rule.selector)\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999617776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,9 @@\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n+        console.log(inputElement)\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999672118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n-        console.log(inputElement)\r\n+        inputElement.onclick = function(){\r\n+            console.log(inputElement)\r\n+        }\r\n     });\r\n   }\r\n }\r\n validation.isRequired = function(selector){\r\n"
+                },
+                {
+                    "date": 1635999913999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,12 @@\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n-        inputElement.onclick = function(){\r\n-            console.log(inputElement)\r\n+        if(inputElement){\r\n+            inputElement.onblur = function(){\r\n+                console.log(inputElement)\r\n+            }\r\n         }\r\n     });\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1636000094211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                console.log(inputElement)\r\n+                console.log(inputElement.value)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636000477948,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,10 @@\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                console.log(inputElement.value)\r\n+                // console.log(inputElement.value)\r\n+                console.log(rule)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636000565709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 // console.log(inputElement.value)\r\n-                console.log(rule)\r\n+                console.log(rule.test)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636000624287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 // console.log(inputElement.value)\r\n-                console.log(rule.test)\r\n+                console.log(rule.test())\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636000632732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n validation.isRequired = function(selector){\r\n     return {\r\n         selector,\r\n         test : function(){\r\n-\r\n+            return 1\r\n         }\r\n     };\r\n }\r\n validation.isEmail = function(selector){\r\n"
+                },
+                {
+                    "date": 1636000902844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,18 @@\n         }\r\n     });\r\n   }\r\n }\r\n+// Định nghĩa rules\r\n+\r\n+// 1.khi có lỗi thì trả ra message lỗi\r\n+// 2. Khi không có lỗi thì trả ra undefined\r\n+// \r\n validation.isRequired = function(selector){\r\n     return {\r\n         selector,\r\n-        test : function(){\r\n-            return 1\r\n+        test : function(value){\r\n+            return value.trim() ? undefined : 'Vui lòng nhập trường này';\r\n         }\r\n     };\r\n }\r\n validation.isEmail = function(selector){\r\n"
+                },
+                {
+                    "date": 1636000959455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 // console.log(inputElement.value)\r\n-                console.log(rule.test())\r\n+                console.log(rule)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636001059387,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,10 +7,10 @@\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                // console.log(inputElement.value)\r\n-                console.log(rule)\r\n+                const value = inputElement.value;\r\n+                rule.test(value);\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636001092481,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n-                rule.test(value);\r\n+                console.log(value)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636001128283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n-                console.log(value)\r\n+                console.log(rule.test(value))\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636001280533,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n-                console.log(rule.test(value))\r\n+                return rule.test(value)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636001381607,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,10 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n-                return rule.test(value)\r\n+                const message = $('.form-message');\r\n+                console.log(message)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636001526073,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,12 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n+                const error = rule.test(value)\r\n+                console.log(error)\r\n                 const message = $('.form-message');\r\n-                console.log(message)\r\n+                \r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636002866808,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,17 @@\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n+       \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 console.log(error)\r\n-                const message = $('.form-message');\r\n-                \r\n+                if(error){\r\n+                    console.log(inputElement);\r\n+                }\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636002935579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 console.log(error)\r\n                 if(error){\r\n-                    console.log(inputElement);\r\n+                    console.log(inputElement.parentElement);\r\n                 }\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636002971535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 console.log(error)\r\n                 if(error){\r\n-                    console.log(inputElement.parentElement);\r\n+                    console.log(inputElement.parentElement.querySelector('.form-message'));\r\n                 }\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636003001349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,11 @@\n             inputElement.onblur = function(){\r\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 console.log(error)\r\n+                console.log(inputElement.parentElement.querySelector('.form-message'));\r\n+\r\n                 if(error){\r\n-                    console.log(inputElement.parentElement.querySelector('.form-message'));\r\n                 }\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636003059536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,12 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n+                const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 console.log(error)\r\n-                console.log(inputElement.parentElement.querySelector('.form-message'));\r\n-\r\n                 if(error){\r\n                 }\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1636003172099,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,10 @@\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 console.log(error)\r\n                 if(error){\r\n+                    messageElement.innerText = error;\r\n+                    messageElement.classList.add('invalid');\r\n                 }\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636003181230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n-                console.log(error)\r\n                 if(error){\r\n                     messageElement.innerText = error;\r\n                     messageElement.classList.add('invalid');\r\n                 }\r\n"
+                },
+                {
+                    "date": 1636003259227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n                 const error = rule.test(value)\r\n                 if(error){\r\n                     messageElement.innerText = error;\r\n                     messageElement.classList.add('invalid');\r\n+                }else{\r\n+                    messageElement.innerText = '';\r\n                 }\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636003322799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n                 if(error){\r\n                     messageElement.innerText = error;\r\n-                    messageElement.classList.add('invalid');\r\n+                   inputElement.parentElement.classList.add('invalid')\r\n                 }else{\r\n                     messageElement.innerText = '';\r\n                 }\r\n             }\r\n"
+                },
+                {
+                    "date": 1636003402214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,9 @@\n                     messageElement.innerText = error;\r\n                    inputElement.parentElement.classList.add('invalid')\r\n                 }else{\r\n                     messageElement.innerText = '';\r\n+                   inputElement.parentElement.classList.remove('invalid')\r\n                 }\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636003727621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,17 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n+  function validate(inputElement,messageElement){\r\n+    if(error){\r\n+        messageElement.innerText = error;\r\n+       inputElement.parentElement.classList.add('invalid')\r\n+    }else{\r\n+        messageElement.innerText = '';\r\n+       inputElement.parentElement.classList.remove('invalid')\r\n+    }\r\n+  }\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n@@ -11,15 +20,9 @@\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n-                if(error){\r\n-                    messageElement.innerText = error;\r\n-                   inputElement.parentElement.classList.add('invalid')\r\n-                }else{\r\n-                    messageElement.innerText = '';\r\n-                   inputElement.parentElement.classList.remove('invalid')\r\n-                }\r\n+               \r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636003748608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n                 const error = rule.test(value)\r\n-               \r\n+                validate();\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636003807395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n-  function validate(inputElement,messageElement){\r\n+  function validate(error,messageElement){\r\n     if(error){\r\n         messageElement.innerText = error;\r\n        inputElement.parentElement.classList.add('invalid')\r\n     }else{\r\n"
+                },
+                {
+                    "date": 1636003954609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n-  function validate(error,messageElement){\r\n+  function validate(inputElement,rule){\r\n+    const value = inputElement.value;\r\n+    const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n        inputElement.parentElement.classList.add('invalid')\r\n     }else{\r\n@@ -18,10 +20,8 @@\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-                const value = inputElement.value;\r\n-                const error = rule.test(value)\r\n                 validate();\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636003971398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n   function validate(inputElement,rule){\r\n+    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n     const value = inputElement.value;\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n@@ -19,9 +20,8 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 validate();\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636004051773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,31 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n+\r\n   function validate(inputElement,rule){\r\n-    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-    const value = inputElement.value;\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n        inputElement.parentElement.classList.add('invalid')\r\n     }else{\r\n         messageElement.innerText = '';\r\n        inputElement.parentElement.classList.remove('invalid')\r\n     }\r\n+\r\n   }\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                validate();\r\n+                const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n+                const value = inputElement.value;\r\n+                \r\n+               \r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636004063296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,10 +22,9 @@\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n-                \r\n-               \r\n+               validate()\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636004116544,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n function validation(options){\r\n \r\n   function validate(inputElement,rule){\r\n+    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -20,9 +21,8 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n                validate()\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1636004161541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,8 @@\n \r\n function validation(options){\r\n \r\n   function validate(inputElement,rule){\r\n-    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -21,10 +20,11 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n+                const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 const value = inputElement.value;\r\n-               validate()\r\n+               validate(inputElement,rule)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636004184561,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n function validation(options){\r\n \r\n   function validate(inputElement,rule){\r\n+    const value = inputElement.value;\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -21,9 +22,8 @@\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-                const value = inputElement.value;\r\n                validate(inputElement,rule)\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636004190621,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n \r\n function validation(options){\r\n \r\n   function validate(inputElement,rule){\r\n+    const inputElement = formElement.querySelector(rule.selector)\r\n+\r\n     const value = inputElement.value;\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n@@ -17,9 +19,8 @@\n   }\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n-        const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n"
+                },
+                {
+                    "date": 1636004206686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,9 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n-\r\n   function validate(inputElement,rule){\r\n-    const inputElement = formElement.querySelector(rule.selector)\r\n-\r\n     const value = inputElement.value;\r\n     const error = rule.test(value)\r\n     if(error){\r\n         messageElement.innerText = error;\r\n@@ -19,8 +16,9 @@\n   }\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n+        const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n"
+                },
+                {
+                    "date": 1636004271105,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,29 +1,25 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n function validation(options){\r\n-  function validate(inputElement,rule){\r\n-    const value = inputElement.value;\r\n-    const error = rule.test(value)\r\n-    if(error){\r\n-        messageElement.innerText = error;\r\n-       inputElement.parentElement.classList.add('invalid')\r\n-    }else{\r\n-        messageElement.innerText = '';\r\n-       inputElement.parentElement.classList.remove('invalid')\r\n-    }\r\n-\r\n-  }\r\n   const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-               validate(inputElement,rule)\r\n+                const value = inputElement.value;\r\n+                const error = rule.test(value)\r\n+                if(error){\r\n+                    messageElement.innerText = error;\r\n+                   inputElement.parentElement.classList.add('invalid')\r\n+                }else{\r\n+                    messageElement.innerText = '';\r\n+                   inputElement.parentElement.classList.remove('invalid')\r\n+                }\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636004306857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,9 @@\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-                const value = inputElement.value;\r\n-                const error = rule.test(value)\r\n+                const error = rule.test(inputElement.value)\r\n                 if(error){\r\n                     messageElement.innerText = error;\r\n                    inputElement.parentElement.classList.add('invalid')\r\n                 }else{\r\n"
+                },
+                {
+                    "date": 1636004325792,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,11 @@\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-                const error = rule.test(inputElement.value)\r\n-                if(error){\r\n-                    messageElement.innerText = error;\r\n+                const errormess = rule.test(inputElement.value)\r\n+                if(errormess){\r\n+                    messageElement.innerText = errormess;\r\n                    inputElement.parentElement.classList.add('invalid')\r\n                 }else{\r\n                     messageElement.innerText = '';\r\n                    inputElement.parentElement.classList.remove('invalid')\r\n"
+                },
+                {
+                    "date": 1636004699499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,24 +1,30 @@\n const $ = document.querySelector.bind(document);\r\n const $$ = document.querySelectorAll.bind(document);\r\n \r\n+\r\n+\r\n function validation(options){\r\n-  const formElement = $(options.form);\r\n+\r\n+function validate(inputElement){\r\n+    const errormess = rule.test(inputElement.value)\r\n+    if(errormess){\r\n+        messageElement.innerText = errormess;\r\n+       inputElement.parentElement.classList.add('invalid')\r\n+    }else{\r\n+        messageElement.innerText = '';\r\n+       inputElement.parentElement.classList.remove('invalid')\r\n+    }\r\n+}\r\n+    const formElement = $(options.form);\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-                const errormess = rule.test(inputElement.value)\r\n-                if(errormess){\r\n-                    messageElement.innerText = errormess;\r\n-                   inputElement.parentElement.classList.add('invalid')\r\n-                }else{\r\n-                    messageElement.innerText = '';\r\n-                   inputElement.parentElement.classList.remove('invalid')\r\n-                }\r\n+                \r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636004740761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n \r\n function validation(options){\r\n \r\n-function validate(inputElement){\r\n+function validate(inputElement,messageElement){\r\n     const errormess = rule.test(inputElement.value)\r\n     if(errormess){\r\n         messageElement.innerText = errormess;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -22,9 +22,9 @@\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-                \r\n+                validate(inputElement,messageElement)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636004777322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n \r\n function validation(options){\r\n \r\n-function validate(inputElement,messageElement){\r\n+function validate(inputElement,rule){\r\n     const errormess = rule.test(inputElement.value)\r\n     if(errormess){\r\n         messageElement.innerText = errormess;\r\n        inputElement.parentElement.classList.add('invalid')\r\n"
+                },
+                {
+                    "date": 1636004786452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n \r\n function validation(options){\r\n \r\n function validate(inputElement,rule){\r\n+    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n+\r\n     const errormess = rule.test(inputElement.value)\r\n     if(errormess){\r\n         messageElement.innerText = errormess;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -21,9 +23,8 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 validate(inputElement,messageElement)\r\n             }\r\n         }\r\n     });\r\n"
+                },
+                {
+                    "date": 1636004797418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,8 @@\n function validation(options){\r\n \r\n function validate(inputElement,rule){\r\n     const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n-\r\n     const errormess = rule.test(inputElement.value)\r\n     if(errormess){\r\n         messageElement.innerText = errormess;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -23,9 +22,9 @@\n         const inputElement = formElement.querySelector(rule.selector)\r\n        \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n-                validate(inputElement,messageElement)\r\n+                validate(inputElement,rule)\r\n             }\r\n         }\r\n     });\r\n   }\r\n"
+                },
+                {
+                    "date": 1636005250567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \r\n \r\n function validation(options){\r\n \r\n+    // Hàm thực hiện validate\r\n function validate(inputElement,rule){\r\n     const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n     const errormess = rule.test(inputElement.value)\r\n     if(errormess){\r\n@@ -15,13 +16,15 @@\n         messageElement.innerText = '';\r\n        inputElement.parentElement.classList.remove('invalid')\r\n     }\r\n }\r\n-    const formElement = $(options.form);\r\n+\r\n+// lấy Element của form cần validate\r\n+  const formElement = $(options.form);\r\n+\r\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n-       \r\n         if(inputElement){\r\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n@@ -44,9 +47,10 @@\n }\r\n validation.isEmail = function(selector){\r\n      return {\r\n         selector,\r\n-        test : function(){\r\n-            \r\n+        test : function(value){\r\n+            const re = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\r\n+            return re.test(value.toLowerCase());\r\n         }\r\n     };\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636005304821,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -48,9 +48,9 @@\n validation.isEmail = function(selector){\r\n      return {\r\n         selector,\r\n         test : function(value){\r\n-            const re = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\r\n-            return re.test(value.toLowerCase());\r\n+            const regex = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\r\n+            return regex.test(value.toLowerCase()) ? undefined : 'Mời nhập đúng định dạng';\r\n         }\r\n     };\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636005417452,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,8 +28,9 @@\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n         }\r\n+        console.log(inputElement)\r\n     });\r\n   }\r\n }\r\n // Định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1636007111903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,13 +24,17 @@\n   if(formElement){\r\n     options.rules.forEach((rule) => {\r\n         const inputElement = formElement.querySelector(rule.selector)\r\n         if(inputElement){\r\n+            //xử lý trường hợp blur ra khỏi input \r\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n+            //Xử lý mỗi khi người dùng nhập vào input\r\n+            inputElement.oninput() = function(){\r\n+                console.log(inputElement.value)\r\n+            }\r\n         }\r\n-        console.log(inputElement)\r\n     });\r\n   }\r\n }\r\n // Định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1636007134935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,12 +29,9 @@\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n-            inputElement.oninput() = function(){\r\n-                console.log(inputElement.value)\r\n-            }\r\n-        }\r\n+          \r\n     });\r\n   }\r\n }\r\n // Định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1636007154834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,10 @@\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n-          \r\n+            \r\n+        }\r\n     });\r\n   }\r\n }\r\n // Định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1636007161967,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,9 +29,12 @@\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n-            \r\n+            inputElement.oninput() = function(){\r\n+                console.log(inputElement.value)\r\n+            }\r\n+        \r\n         }\r\n     });\r\n   }\r\n }\r\n"
+                },
+                {
+                    "date": 1636007183864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,13 +29,11 @@\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n-            inputElement.oninput() = function(){\r\n-                console.log(inputElement.value)\r\n-            }\r\n-        \r\n+            \r\n         }\r\n+        }\r\n     });\r\n   }\r\n }\r\n // Định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1636007226088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -29,11 +29,13 @@\n             inputElement.onblur = function(){\r\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n-            \r\n+            inputElement.oninput = function(){\r\n+                console.log(inputElement.value)\r\n+            }\r\n         }\r\n-        }\r\n+        \r\n     });\r\n   }\r\n }\r\n // Định nghĩa rules\r\n"
+                },
+                {
+                    "date": 1636007264909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,10 @@\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n             inputElement.oninput = function(){\r\n-                console.log(inputElement.value)\r\n+                messageElement.innerText = '';\r\n+                inputElement.parentElement.classList.remove('invalid')\r\n             }\r\n         }\r\n         \r\n     });\r\n"
+                },
+                {
+                    "date": 1636007303112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,8 +30,9 @@\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n             inputElement.oninput = function(){\r\n+    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n                 messageElement.innerText = '';\r\n                 inputElement.parentElement.classList.remove('invalid')\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1636007671994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n function validation(options){\r\n \r\n     // Hàm thực hiện validate\r\n function validate(inputElement,rule){\r\n-    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n+    const messageElement =inputElement.parentElement.querySelector(options.errorSelector);\r\n     const errormess = rule.test(inputElement.value)\r\n     if(errormess){\r\n         messageElement.innerText = errormess;\r\n        inputElement.parentElement.classList.add('invalid')\r\n@@ -30,9 +30,10 @@\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n             inputElement.oninput = function(){\r\n-    const messageElement =inputElement.parentElement.querySelector('.form-message');\r\n+                const messageElement =\r\n+                inputElement.parentElement.querySelector('.form-message');\r\n                 messageElement.innerText = '';\r\n                 inputElement.parentElement.classList.remove('invalid')\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1636007741164,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,9 +31,9 @@\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n             inputElement.oninput = function(){\r\n                 const messageElement =\r\n-                inputElement.parentElement.querySelector('.form-message');\r\n+                inputElement.parentElement.querySelector(options.errorSelector);\r\n                 messageElement.innerText = '';\r\n                 inputElement.parentElement.classList.remove('invalid')\r\n             }\r\n         }\r\n"
+                },
+                {
+                    "date": 1636008170501,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -53,13 +53,23 @@\n             return value.trim() ? undefined : 'Vui lòng nhập trường này';\r\n         }\r\n     };\r\n }\r\n+// rule email\r\n validation.isEmail = function(selector){\r\n      return {\r\n         selector,\r\n         test : function(value){\r\n             const regex = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\r\n             return regex.test(value.toLowerCase()) ? undefined : 'Mời nhập đúng định dạng';\r\n         }\r\n     };\r\n+}\r\n+// rule islength\r\n+validation.islength = function(selector,min){\r\n+     return {\r\n+        selector,\r\n+        test : function(value){\r\n+           return value >= min ? undefined : `Mời nhập đủ ${min} ký tự`\r\n+        }\r\n+    };\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636008222969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -68,8 +68,8 @@\n validation.islength = function(selector,min){\r\n      return {\r\n         selector,\r\n         test : function(value){\r\n-           return value >= min ? undefined : `Mời nhập đủ ${min} ký tự`\r\n+           return value.length >= min ? undefined : `Mời nhập đủ ${min} ký tự`\r\n         }\r\n     };\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1636008479399,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,12 +30,9 @@\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n             inputElement.oninput = function(){\r\n-                const messageElement =\r\n-                inputElement.parentElement.querySelector(options.errorSelector);\r\n-                messageElement.innerText = '';\r\n-                inputElement.parentElement.classList.remove('invalid')\r\n+              validate()\r\n             }\r\n         }\r\n         \r\n     });\r\n"
+                },
+                {
+                    "date": 1636008609742,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,12 @@\n                 validate(inputElement,rule)\r\n             }\r\n             //Xử lý mỗi khi người dùng nhập vào input\r\n             inputElement.oninput = function(){\r\n-              validate()\r\n+                const messageElement =\r\n+                inputElement.parentElement.querySelector(options.errorSelector);\r\n+                messageElement.innerText = '';\r\n+                inputElement.parentElement.classList.remove('invalid')\r\n             }\r\n         }\r\n         \r\n     });\r\n"
+                },
+                {
+                    "date": 1638297509247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -71,5 +71,6 @@\n         test : function(value){\r\n            return value.length >= min ? undefined : `Mời nhập đủ ${min} ký tự`\r\n         }\r\n     };\r\n-}\n\\ No newline at end of file\n+}\r\n+\r\n"
+                },
+                {
+                    "date": 1638512771242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,76 +1,176 @@\n-const $ = document.querySelector.bind(document);\r\n-const $$ = document.querySelectorAll.bind(document);\r\n+// Đối tượng `Validator`\r\n+function Validator(options) {\r\n+    function getParent(element, selector) {\r\n+        while (element.parentElement) {\r\n+            if (element.parentElement.matches(selector)) {\r\n+                return element.parentElement;\r\n+            }\r\n+            element = element.parentElement;\r\n+        }\r\n+    }\r\n \r\n+    var selectorRules = {};\r\n \r\n+    // Hàm thực hiện validate\r\n+    function validate(inputElement, rule) {\r\n+        var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);\r\n+        var errorMessage;\r\n \r\n-function validation(options){\r\n+        // Lấy ra các rules của selector\r\n+        var rules = selectorRules[rule.selector];\r\n+        \r\n+        // Lặp qua từng rule & kiểm tra\r\n+        // Nếu có lỗi thì dừng việc kiểm\r\n+        for (var i = 0; i < rules.length; ++i) {\r\n+            switch (inputElement.type) {\r\n+                case 'radio':\r\n+                case 'checkbox':\r\n+                    errorMessage = rules[i](\r\n+                        formElement.querySelector(rule.selector + ':checked')\r\n+                    );\r\n+                    break;\r\n+                default:\r\n+                    errorMessage = rules[i](inputElement.value);\r\n+            }\r\n+            if (errorMessage) break;\r\n+        }\r\n+        \r\n+        if (errorMessage) {\r\n+            errorElement.innerText = errorMessage;\r\n+            getParent(inputElement, options.formGroupSelector).classList.add('invalid');\r\n+        } else {\r\n+            errorElement.innerText = '';\r\n+            getParent(inputElement, options.formGroupSelector).classList.remove('invalid');\r\n+        }\r\n \r\n-    // Hàm thực hiện validate\r\n-function validate(inputElement,rule){\r\n-    const messageElement =inputElement.parentElement.querySelector(options.errorSelector);\r\n-    const errormess = rule.test(inputElement.value)\r\n-    if(errormess){\r\n-        messageElement.innerText = errormess;\r\n-       inputElement.parentElement.classList.add('invalid')\r\n-    }else{\r\n-        messageElement.innerText = '';\r\n-       inputElement.parentElement.classList.remove('invalid')\r\n+        return !errorMessage;\r\n     }\r\n-}\r\n \r\n-// lấy Element của form cần validate\r\n-  const formElement = $(options.form);\r\n+    // Lấy element của form cần validate\r\n+    var formElement = document.querySelector(options.form);\r\n+    if (formElement) {\r\n+        // Khi submit form\r\n+        formElement.onsubmit = function (e) {\r\n+            e.preventDefault();\r\n \r\n-  if(formElement){\r\n-    options.rules.forEach((rule) => {\r\n-        const inputElement = formElement.querySelector(rule.selector)\r\n-        if(inputElement){\r\n-            //xử lý trường hợp blur ra khỏi input \r\n-            inputElement.onblur = function(){\r\n-                validate(inputElement,rule)\r\n+            var isFormValid = true;\r\n+\r\n+            // Lặp qua từng rules và validate\r\n+            options.rules.forEach(function (rule) {\r\n+                var inputElement = formElement.querySelector(rule.selector);\r\n+                var isValid = validate(inputElement, rule);\r\n+                if (!isValid) {\r\n+                    isFormValid = false;\r\n+                }\r\n+            });\r\n+\r\n+            if (isFormValid) {\r\n+                // Trường hợp submit với javascript\r\n+                if (typeof options.onSubmit === 'function') {\r\n+                    var enableInputs = formElement.querySelectorAll('[name]');\r\n+                    var formValues = Array.from(enableInputs).reduce(function (values, input) {\r\n+                        \r\n+                        switch(input.type) {\r\n+                            case 'radio':\r\n+                                values[input.name] = formElement.querySelector('input[name=\"' + input.name + '\"]:checked').value;\r\n+                                break;\r\n+                            case 'checkbox':\r\n+                                if (!input.matches(':checked')) {\r\n+                                    values[input.name] = '';\r\n+                                    return values;\r\n+                                }\r\n+                                if (!Array.isArray(values[input.name])) {\r\n+                                    values[input.name] = [];\r\n+                                }\r\n+                                values[input.name].push(input.value);\r\n+                                break;\r\n+                            case 'file':\r\n+                                values[input.name] = input.files;\r\n+                                break;\r\n+                            default:\r\n+                                values[input.name] = input.value;\r\n+                        }\r\n+\r\n+                        return values;\r\n+                    }, {});\r\n+                    options.onSubmit(formValues);\r\n+                }\r\n+                // Trường hợp submit với hành vi mặc định\r\n+                else {\r\n+                    formElement.submit();\r\n+                }\r\n             }\r\n-            //Xử lý mỗi khi người dùng nhập vào input\r\n-            inputElement.oninput = function(){\r\n-                const messageElement =\r\n-                inputElement.parentElement.querySelector(options.errorSelector);\r\n-                messageElement.innerText = '';\r\n-                inputElement.parentElement.classList.remove('invalid')\r\n+        }\r\n+\r\n+        // Lặp qua mỗi rule và xử lý (lắng nghe sự kiện blur, input, ...)\r\n+        options.rules.forEach(function (rule) {\r\n+\r\n+            // Lưu lại các rules cho mỗi input\r\n+            if (Array.isArray(selectorRules[rule.selector])) {\r\n+                selectorRules[rule.selector].push(rule.test);\r\n+            } else {\r\n+                selectorRules[rule.selector] = [rule.test];\r\n             }\r\n-        }\r\n-        \r\n-    });\r\n-  }\r\n+\r\n+            var inputElements = formElement.querySelectorAll(rule.selector);\r\n+\r\n+            Array.from(inputElements).forEach(function (inputElement) {\r\n+               // Xử lý trường hợp blur khỏi input\r\n+                inputElement.onblur = function () {\r\n+                    validate(inputElement, rule);\r\n+                }\r\n+\r\n+                // Xử lý mỗi khi người dùng nhập vào input\r\n+                inputElement.oninput = function () {\r\n+                    var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);\r\n+                    errorElement.innerText = '';\r\n+                    getParent(inputElement, options.formGroupSelector).classList.remove('invalid');\r\n+                } \r\n+            });\r\n+        });\r\n+    }\r\n+\r\n }\r\n+\r\n+\r\n+\r\n // Định nghĩa rules\r\n-\r\n-// 1.khi có lỗi thì trả ra message lỗi\r\n-// 2. Khi không có lỗi thì trả ra undefined\r\n-// \r\n-validation.isRequired = function(selector){\r\n+// Nguyên tắc của các rules:\r\n+// 1. Khi có lỗi => Trả ra message lỗi\r\n+// 2. Khi hợp lệ => Không trả ra cái gì cả (undefined)\r\n+Validator.isRequired = function (selector, message) {\r\n     return {\r\n-        selector,\r\n-        test : function(value){\r\n-            return value.trim() ? undefined : 'Vui lòng nhập trường này';\r\n+        selector: selector,\r\n+        test: function (value) {\r\n+            return value ? undefined :  message || 'Vui lòng nhập trường này'\r\n         }\r\n     };\r\n }\r\n-// rule email\r\n-validation.isEmail = function(selector){\r\n-     return {\r\n-        selector,\r\n-        test : function(value){\r\n-            const regex = /^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/;\r\n-            return regex.test(value.toLowerCase()) ? undefined : 'Mời nhập đúng định dạng';\r\n+\r\n+Validator.isEmail = function (selector, message) {\r\n+    return {\r\n+        selector: selector,\r\n+        test: function (value) {\r\n+            var regex = /^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$/;\r\n+            return regex.test(value) ? undefined :  message || 'Trường này phải là email';\r\n         }\r\n     };\r\n }\r\n-// rule islength\r\n-validation.islength = function(selector,min){\r\n-     return {\r\n-        selector,\r\n-        test : function(value){\r\n-           return value.length >= min ? undefined : `Mời nhập đủ ${min} ký tự`\r\n+\r\n+Validator.minLength = function (selector, min, message) {\r\n+    return {\r\n+        selector: selector,\r\n+        test: function (value) {\r\n+            return value.length >= min ? undefined :  message || `Vui lòng nhập tối thiểu ${min} kí tự`;\r\n         }\r\n     };\r\n }\r\n \r\n+Validator.isConfirmed = function (selector, getConfirmValue, message) {\r\n+    return {\r\n+        selector: selector,\r\n+        test: function (value) {\r\n+            return value === getConfirmValue() ? undefined : message || 'Giá trị nhập vào không chính xác';\r\n+        }\r\n+    }\r\n+}\r\n"
+                }
+            ],
+            "date": 1635959767456,
+            "name": "Commit-0",
+            "content": "validation(){\r\n    \r\n}"
+        }
+    ]
+}

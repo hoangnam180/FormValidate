@@ -1,0 +1,78 @@
+{
+    "sourceFile": "style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1635957905110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1635957912054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n-/* * {\r\n+/* /* * {\r\n     padding: 0;\r\n     margin: 0;\r\n     box-sizing: border-box;\r\n-  }\r\n+  } */\r\n   html {\r\n     color: #333;\r\n     font-size: 62.5%;\r\n     font-family: \"Open Sans\", sans-serif;\r\n"
+                },
+                {
+                    "date": 1635957949529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n-/* /* * {\r\n+ {\r\n     padding: 0;\r\n     margin: 0;\r\n     box-sizing: border-box;\r\n-  } */\r\n+  }\r\n+  \r\n   html {\r\n     color: #333;\r\n     font-size: 62.5%;\r\n     font-family: \"Open Sans\", sans-serif;\r\n@@ -103,5 +104,5 @@\n   \r\n   .spacer {\r\n     margin-top: 36px;\r\n   }\r\n-   */\n\\ No newline at end of file\n+   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635957956312,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n- {\r\n+ *{\r\n     padding: 0;\r\n     margin: 0;\r\n     box-sizing: border-box;\r\n   }\r\n"
+                },
+                {
+                    "date": 1635958199019,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,7 +102,7 @@\n     background-color: #1ac7b6;\r\n   }\r\n   \r\n   .spacer {\r\n-    margin-top: 36px;\r\n+    /* margin-top: 36px; */\r\n   }\r\n    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958224577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -102,7 +102,7 @@\n     background-color: #1ac7b6;\r\n   }\r\n   \r\n   .spacer {\r\n-    /* margin-top: 36px; */\r\n+    margin-top: 36px;\r\n   }\r\n    \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958317682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,5 +104,9 @@\n   \r\n   .spacer {\r\n     margin-top: 36px;\r\n   }\r\n-   \n\\ No newline at end of file\n+   \r\n+  .form-group::after{\r\n+      content: \"\";\r\n+      margin-top: 30px;\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958324675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,6 +107,6 @@\n   }\r\n    \r\n   .form-group::after{\r\n       content: \"\";\r\n-      margin-top: 30px;\r\n+      margin-bottom: 30px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958335863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -108,5 +108,6 @@\n    \r\n   .form-group::after{\r\n       content: \"\";\r\n       margin-bottom: 30px;\r\n+      width: 100px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958352831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,9 +105,8 @@\n   .spacer {\r\n     margin-top: 36px;\r\n   }\r\n    \r\n-  .form-group::after{\r\n+  .form-group::before{\r\n       content: \"\";\r\n       margin-bottom: 30px;\r\n-      width: 100px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958359079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,6 +107,6 @@\n   }\r\n    \r\n   .form-group::before{\r\n       content: \"\";\r\n-      margin-bottom: 30px;\r\n+      margin-top: 30px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958368503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,6 +107,6 @@\n   }\r\n    \r\n   .form-group::before{\r\n       content: \"\";\r\n-      margin-top: 30px;\r\n+      margin-top: 36px;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958374160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -105,8 +105,8 @@\n   .spacer {\r\n     margin-top: 36px;\r\n   }\r\n    \r\n-  .form-group::before{\r\n+  /* .form-group::before{\r\n       content: \"\";\r\n       margin-top: 36px;\r\n\\ No newline at end of file\n-  }\n+  } */\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635958393870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,5 @@\n   \r\n   .spacer {\r\n     margin-top: 36px;\r\n   }\r\n-   \r\n-  /* .form-group::before{\r\n-      content: \"\";\r\n-      margin-top: 36px;\r\n-  } */\n\\ No newline at end of file\n+   \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1635960155314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,5 +104,5 @@\n   \r\n   .spacer {\r\n     margin-top: 36px;\r\n   }\r\n-   \n\\ No newline at end of file\n+     \n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1638512772438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,108 +1,106 @@\n- *{\r\n-    padding: 0;\r\n-    margin: 0;\r\n-    box-sizing: border-box;\r\n-  }\r\n-  \r\n-  html {\r\n-    color: #333;\r\n-    font-size: 62.5%;\r\n-    font-family: \"Open Sans\", sans-serif;\r\n-  }\r\n-  .main {\r\n-    background: #f1f1f1;\r\n-    min-height: 100vh;\r\n-    display: flex;\r\n-    justify-content: center;\r\n-  }\r\n-  .form {\r\n-    width: 360px;\r\n-    min-height: 100px;\r\n-    padding: 32px 24px;\r\n-    text-align: center;\r\n-    background: #fff;\r\n-    border-radius: 2px;\r\n-    margin: 24px;\r\n-    align-self: center;\r\n-    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);\r\n-  }\r\n-  .form .heading {\r\n-    font-size: 2rem;\r\n-  }\r\n-  .form .desc {\r\n-    text-align: center;\r\n-    color: #636d77;\r\n-    font-size: 1.6rem;\r\n-    font-weight: lighter;\r\n-    line-height: 2.4rem;\r\n-    margin-top: 16px;\r\n-    font-weight: 300;\r\n-  }\r\n-  \r\n-  .form-group {\r\n-    display: flex;\r\n-    margin-bottom: 16px;\r\n-    flex-direction: column;\r\n-  }\r\n-  \r\n-  .form-label,\r\n-  .form-message {\r\n-    text-align: left;\r\n-  }\r\n-  \r\n-  .form-label {\r\n-    font-weight: 700;\r\n-    padding-bottom: 6px;\r\n-    line-height: 1.8rem;\r\n-    font-size: 1.4rem;\r\n-  }\r\n-  \r\n-  .form-control {\r\n-    height: 40px;\r\n-    padding: 8px 12px;\r\n-    border: 1px solid #b3b3b3;\r\n-    border-radius: 3px;\r\n-    outline: none;\r\n-    font-size: 1.4rem;\r\n-  }\r\n-  \r\n-  .form-control:hover {\r\n-    border-color: #1dbfaf;\r\n-  }\r\n-  \r\n-  .form-group.invalid .form-control {\r\n-    border-color: #f33a58;\r\n-  }\r\n-  \r\n-  .form-group.invalid .form-message {\r\n-    color: #f33a58;\r\n-  }\r\n-  \r\n-  .form-message {\r\n-    font-size: 1.2rem;\r\n-    line-height: 1.6rem;\r\n-    padding: 4px 0 0;\r\n-  }\r\n-  \r\n-  .form-submit {\r\n-    outline: none;\r\n-    background-color: #1dbfaf;\r\n-    margin-top: 12px;\r\n-    padding: 12px 16px;\r\n-    font-weight: 600;\r\n-    color: #fff;\r\n-    border: none;\r\n-    width: 100%;\r\n-    font-size: 14px;\r\n-    border-radius: 8px;\r\n-    cursor: pointer;\r\n-  }\r\n-  \r\n-  .form-submit:hover {\r\n-    background-color: #1ac7b6;\r\n-  }\r\n-  \r\n-  .spacer {\r\n-    margin-top: 36px;\r\n-  }\r\n-     \n\\ No newline at end of file\n+* {\r\n+  padding: 0;\r\n+  margin: 0;\r\n+  box-sizing: border-box;\r\n+}\r\n+html {\r\n+  color: #333;\r\n+  font-size: 62.5%;\r\n+  font-family: 'Open Sans', sans-serif;\r\n+}\r\n+.main {\r\n+  background: #f1f1f1;\r\n+  min-height: 100vh;\r\n+  display: flex;\r\n+  justify-content: center;\r\n+}\r\n+.form {\r\n+  width: 360px;\r\n+  min-height: 100px;\r\n+  padding: 32px 24px;\r\n+  text-align: center;\r\n+  background: #fff;\r\n+  border-radius: 2px;\r\n+  margin: 24px;\r\n+  align-self: center;\r\n+  box-shadow: 0 2px 5px 0 rgba(51,62,73,.1);\r\n+}\r\n+.form .heading {\r\n+  font-size: 2rem;\r\n+}\r\n+.form .desc {\r\n+  text-align: center;\r\n+  color: #636d77;\r\n+  font-size: 1.6rem;\r\n+  font-weight: lighter;\r\n+  line-height: 2.4rem;\r\n+  margin-top: 16px;\r\n+  font-weight: 300;\r\n+}\r\n+\r\n+.form-group {\r\n+  display: flex;\r\n+  margin-bottom: 16px;\r\n+  flex-direction: column;\r\n+}\r\n+\r\n+.form-label,\r\n+.form-message {\r\n+  text-align: left;\r\n+}\r\n+\r\n+.form-label {\r\n+  font-weight: 700;\r\n+  padding-bottom: 6px;\r\n+  line-height: 1.8rem;\r\n+  font-size: 1.4rem;\r\n+}\r\n+\r\n+.form-control {\r\n+  height: 40px;\r\n+  padding: 8px 12px;\r\n+  border: 1px solid #b3b3b3;\r\n+  border-radius: 3px;\r\n+  outline: none;\r\n+  font-size: 1.4rem;\r\n+}\r\n+\r\n+.form-control:hover {\r\n+  border-color: #1dbfaf;\r\n+}\r\n+\r\n+.form-group.invalid .form-control {\r\n+  border-color: #f33a58;\r\n+}\r\n+\r\n+.form-group.invalid .form-message {\r\n+  color: #f33a58;\r\n+}\r\n+\r\n+.form-message {\r\n+  font-size: 1.2rem;\r\n+  line-height: 1.6rem;\r\n+  padding: 4px 0 0;\r\n+}\r\n+\r\n+.form-submit {\r\n+  outline: none;\r\n+  background-color: #1dbfaf;\r\n+  margin-top: 12px;\r\n+  padding: 12px 16px;\r\n+  font-weight: 600;\r\n+  color: #fff;\r\n+  border: none;\r\n+  width: 100%;\r\n+  font-size: 14px;\r\n+  border-radius: 8px;\r\n+  cursor: pointer;\r\n+}\r\n+\r\n+.form-submit:hover {\r\n+  background-color: #1ac7b6;\r\n+}\r\n+\r\n+.spacer {\r\n+  margin-top: 36px;\r\n+}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1635957905110,
+            "name": "Commit-0",
+            "content": "/* * {\r\n    padding: 0;\r\n    margin: 0;\r\n    box-sizing: border-box;\r\n  }\r\n  html {\r\n    color: #333;\r\n    font-size: 62.5%;\r\n    font-family: \"Open Sans\", sans-serif;\r\n  }\r\n  .main {\r\n    background: #f1f1f1;\r\n    min-height: 100vh;\r\n    display: flex;\r\n    justify-content: center;\r\n  }\r\n  .form {\r\n    width: 360px;\r\n    min-height: 100px;\r\n    padding: 32px 24px;\r\n    text-align: center;\r\n    background: #fff;\r\n    border-radius: 2px;\r\n    margin: 24px;\r\n    align-self: center;\r\n    box-shadow: 0 2px 5px 0 rgba(51, 62, 73, 0.1);\r\n  }\r\n  .form .heading {\r\n    font-size: 2rem;\r\n  }\r\n  .form .desc {\r\n    text-align: center;\r\n    color: #636d77;\r\n    font-size: 1.6rem;\r\n    font-weight: lighter;\r\n    line-height: 2.4rem;\r\n    margin-top: 16px;\r\n    font-weight: 300;\r\n  }\r\n  \r\n  .form-group {\r\n    display: flex;\r\n    margin-bottom: 16px;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .form-label,\r\n  .form-message {\r\n    text-align: left;\r\n  }\r\n  \r\n  .form-label {\r\n    font-weight: 700;\r\n    padding-bottom: 6px;\r\n    line-height: 1.8rem;\r\n    font-size: 1.4rem;\r\n  }\r\n  \r\n  .form-control {\r\n    height: 40px;\r\n    padding: 8px 12px;\r\n    border: 1px solid #b3b3b3;\r\n    border-radius: 3px;\r\n    outline: none;\r\n    font-size: 1.4rem;\r\n  }\r\n  \r\n  .form-control:hover {\r\n    border-color: #1dbfaf;\r\n  }\r\n  \r\n  .form-group.invalid .form-control {\r\n    border-color: #f33a58;\r\n  }\r\n  \r\n  .form-group.invalid .form-message {\r\n    color: #f33a58;\r\n  }\r\n  \r\n  .form-message {\r\n    font-size: 1.2rem;\r\n    line-height: 1.6rem;\r\n    padding: 4px 0 0;\r\n  }\r\n  \r\n  .form-submit {\r\n    outline: none;\r\n    background-color: #1dbfaf;\r\n    margin-top: 12px;\r\n    padding: 12px 16px;\r\n    font-weight: 600;\r\n    color: #fff;\r\n    border: none;\r\n    width: 100%;\r\n    font-size: 14px;\r\n    border-radius: 8px;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .form-submit:hover {\r\n    background-color: #1ac7b6;\r\n  }\r\n  \r\n  .spacer {\r\n    margin-top: 36px;\r\n  }\r\n   */"
+        }
+    ]
+}
